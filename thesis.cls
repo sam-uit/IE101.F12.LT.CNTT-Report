@@ -16,8 +16,8 @@
 %%===========================================================================%%
 \NeedsTeXFormat{LaTeX2e}[1996/12/01]
 \ProvidesClass{thesis}
-              [2007/22/02 v1.0
-   LaTeX document class]
+[2007/22/02 v1.0
+  LaTeX document class]
 \def\baseclass{book}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{\baseclass}}
 \def\@checkoptions#1#2{
@@ -53,8 +53,8 @@
 
 \newcommand\btypeout[1]{\bhrule\typeout{\space #1}\bhrule}
 \def\today{\ifcase\month\or
-  January\or February\or March\or April\or May\or June\or
-  July\or August\or September\or October\or November\or December\fi
+    January\or February\or March\or April\or May\or June\or
+    July\or August\or September\or October\or November\or December\fi
   \space \number\year}
 \usepackage{setspace}
 \usepackage[utf8]{vntex}
@@ -63,13 +63,13 @@
 \setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
 \usepackage{vmargin}
 \setmarginsrb           { 35mm}  % left margin
-                        { 25mm}  % top margin
-                        { 20mm}  % right margin
-                        { 30mm}  % bottom margin
-                        { 20pt}  % head height
-                        {0.25in}  % head sep
-                        { 9pt}  % foot height
-                        { 0.3in}  % foot sep
+{ 25mm}  % top margin
+{ 20mm}  % right margin
+{ 30mm}  % bottom margin
+{ 20pt}  % head height
+{0.25in}  % head sep
+{ 9pt}  % foot height
+{ 0.3in}  % foot sep
 \raggedbottom
 \setlength{\topskip}{1\topskip \@plus 5\p@}
 \doublehyphendemerits=10000       % No consecutive line hyphens.
@@ -88,10 +88,10 @@
 %
 \renewcommand{\subsectionmark}[1]{}
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-\hbox{}
-\thispagestyle{empty}
-\newpage
-\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+      \hbox{}
+      \thispagestyle{empty}
+      \newpage
+      \if@twocolumn\hbox{}\newpage\fi\fi\fi}
 %urlcol
 \usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,xspace}
 \theoremstyle{plain}
@@ -133,31 +133,31 @@
 %\usepackage[usenames,dvipsnames,svgnames,x11names,hyperref]{xcolor}
 %\usepackage{lstpatch}
 \lstset{captionpos=b,
-        frame=tb,
-        basicstyle=\scriptsize\ttfamily,
-        showstringspaces=false,
-        keepspaces=true}
+  frame=tb,
+  basicstyle=\scriptsize\ttfamily,
+  showstringspaces=false,
+  keepspaces=true}
 \lstdefinestyle{matlab} {
-        language=Matlab,
-        keywordstyle=\color{blue},
-        commentstyle=\color[rgb]{0.13,0.55,0.13}\em,
-        stringstyle=\color[rgb]{0.7,0,0} }
+  language=Matlab,
+  keywordstyle=\color{blue},
+  commentstyle=\color[rgb]{0.13,0.55,0.13}\em,
+  stringstyle=\color[rgb]{0.7,0,0} }
 \usepackage[pdfpagemode={UseOutlines},
-    bookmarks=true,
-    bookmarksopen=true,
-    bookmarksopenlevel=0,
-    bookmarksnumbered=true,
-    hypertexnames=false,
-    colorlinks=true,
-    linkcolor={blue},
-    citecolor={green},
-    filecolor={magenta},
-    urlcolor={blue},
-    pdfstartview={FitV},
-    unicode=true,breaklinks=true]{hyperref}
+  bookmarks=true,
+  bookmarksopen=true,
+  bookmarksopenlevel=0,
+  bookmarksnumbered=true,
+  hypertexnames=false,
+  colorlinks=true,
+  linkcolor={blue},
+  citecolor={green},
+  filecolor={magenta},
+  urlcolor={blue},
+  pdfstartview={FitV},
+  unicode=true,breaklinks=true]{hyperref}
 %    [unicode=true,colorlinks=true]
 \pdfstringdefDisableCommands{
-   \let\\\space
+  \let\\\space
 }
 \newcommand*{\supervisor}[1]{\def\supname{#1}}
 \newcommand*{\examiner}[1]{\def\examname{#1}}
@@ -190,25 +190,25 @@
 \degree      {}
 \authors     {}
 \university  {\texorpdfstring{\href{http://www.example.com}
-                {UNIVERSITY NAME}}
-                {UNIVERSITY NAME}}
+    {UNIVERSITY NAME}}
+  {UNIVERSITY NAME}}
 \UNIVERSITY  {\texorpdfstring{\href{http://www.example.com}
-                {UNIVERSITY NAME}}{UNIVERSITY NAME}}
+    {UNIVERSITY NAME}}{UNIVERSITY NAME}}
 \department  {\texorpdfstring{\href{Department or School Web Site URL Here (include http://)}
-                {Department or School Name}}
-                {Department or School Name}}
+    {Department or School Name}}
+  {Department or School Name}}
 \DEPARTMENT  {\texorpdfstring{\href{Department or School Web Site URL Here (include http://)}
-                {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
-                {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
+    {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
+  {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
 \group       {\texorpdfstring{\href{Research Group Web Site URL Here (include http://)}
-                {Research Group Name}}
-                {Research Group Name}}
+    {Research Group Name}}
+  {Research Group Name}}
 \GROUP       {\texorpdfstring{\href{Research Group Web Site URL Here (include http://)}
-                {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
-                {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
+    {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
+  {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
 \faculty     {\texorpdfstring{\href{Faculty Web Site URL Here (include http://)}
-                {Faculty Name}}
-                {Faculty Name}}
+    {Faculty Name}}
+  {Faculty Name}}
 \FACULTY     {\texorpdfstring{FACULTY NAME (IN BLOCK CAPITALS)}}
 \addresses   {}
 \subject     {A project subject}
@@ -228,34 +228,34 @@
     \null\vfil
     \vskip 60\p@
     \begin{center}
-        \setlength{\parskip}{0pt}
-	{\Large\textbf{\UNIVNAME}\par}
-	{\LARGE\textbf{\univname}\par}
-	\vfill
-	{\Huge \bf \@title \par}
-	\bigskip
-	{\Large \bf \projname \par}
-	\bigskip
-	\vfill
-	{\begin{minipage}{0.4\textwidth}
-	    \bf {Giảng Viên Hướng Dẫn:}\\
-	    \bf {Sinh Viên Thực Hiện:}\\
-	    \bf {Lớp:}\\
-	    \bf {Ngành:}\\
-	    \bf {Khóa:}
-	\end{minipage}
-	\begin{minipage}{0.4\textwidth}
-	    \bf {\INSTRUCTORNAME}\\
-	    \bf {\STUDENTNAME}\\
-	    \bf {\classname}\\
-	    \bf {\DEPTNAME}\\
-	    \bf {\schyear}
-	\end{minipage}}
-	\vfill
-	{\large \bf \addressnames, \@date \par}
-	\bigskip
+      \setlength{\parskip}{0pt}
+      {\Large\textbf{\UNIVNAME}\par}
+      {\LARGE\textbf{\univname}\par}
+      \vfill
+      {\Huge \bf \@title \par}
+      \bigskip
+      {\Large \bf \projname \par}
+      \bigskip
+      \vfill
+      {\begin{minipage}{0.4\textwidth}
+          \bf {Giảng Viên Hướng Dẫn:}\\
+          \bf {Sinh Viên Thực Hiện:}\\
+          \bf {Lớp:}\\
+          \bf {Ngành:}\\
+          \bf {Khóa:}
+        \end{minipage}
+        \begin{minipage}{0.4\textwidth}
+          \bf {\INSTRUCTORNAME}\\
+          \bf {\STUDENTNAME}\\
+          \bf {\classname}\\
+          \bf {\DEPTNAME}\\
+          \bf {\schyear}
+        \end{minipage}}
+      \vfill
+      {\large \bf \addressnames, \@date \par}
+      \bigskip
     \end{center}
-%
+    %
     \par
     \@thanks
     \vfil\null
@@ -309,60 +309,60 @@
   \addcontentsline{toc}{chapter}{#1}}
 %==============================================================================
 \renewcommand\tableofcontents{
-\btypeout{Mục Lục}
-\addtotoc{Mục Lục}
-\begin{spacing}{1}{
-    \setlength{\parskip}{1pt}
-    \if@twocolumn
-      \@restonecoltrue\onecolumn
-    \else
-      \@restonecolfalse
-    \fi
-    \chapter*{\contentsname
+  \btypeout{Mục Lục}
+  \addtotoc{Mục Lục}
+  \begin{spacing}{1}{
+      \setlength{\parskip}{1pt}
+      \if@twocolumn
+        \@restonecoltrue\onecolumn
+      \else
+        \@restonecolfalse
+      \fi
+      \chapter*{\contentsname
         \@mkboth{
-           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}
-    \@starttoc{toc}
-    \if@restonecol\twocolumn\fi
-   \cleardoublepage
-}\end{spacing}
+          \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}
+      \@starttoc{toc}
+      \if@restonecol\twocolumn\fi
+      \cleardoublepage
+    }\end{spacing}
 }
 %==============================================================================
 \renewcommand\listoffigures{
-\btypeout{Danh Sách Hình Vẽ}
-\addtotoc{Danh Sách Hình Vẽ}
-\begin{spacing}{1}{
-    \setlength{\parskip}{1pt}
-    \if@twocolumn
-      \@restonecoltrue\onecolumn
-    \else
-      \@restonecolfalse
-    \fi
-    \chapter*{\listfigurename
-      \@mkboth{\MakeUppercase\listfigurename}
-              {\MakeUppercase\listfigurename}}
-    \@starttoc{lof}
-    \if@restonecol\twocolumn\fi
-    \cleardoublepage
-}\end{spacing}
+  \btypeout{Danh Sách Hình Vẽ}
+  \addtotoc{Danh Sách Hình Vẽ}
+  \begin{spacing}{1}{
+      \setlength{\parskip}{1pt}
+      \if@twocolumn
+        \@restonecoltrue\onecolumn
+      \else
+        \@restonecolfalse
+      \fi
+      \chapter*{\listfigurename
+        \@mkboth{\MakeUppercase\listfigurename}
+        {\MakeUppercase\listfigurename}}
+      \@starttoc{lof}
+      \if@restonecol\twocolumn\fi
+      \cleardoublepage
+    }\end{spacing}
 }
 %==============================================================================
 \renewcommand\listoftables{
-\btypeout{Danh Sách Bảng}
-\addtotoc{Danh Sách Bảng}
-\begin{spacing}{1}{
-    \setlength{\parskip}{1pt}
-    \if@twocolumn
-      \@restonecoltrue\onecolumn
-    \else
-      \@restonecolfalse
-    \fi
-    \chapter*{\listtablename
-      \@mkboth{
+  \btypeout{Danh Sách Bảng}
+  \addtotoc{Danh Sách Bảng}
+  \begin{spacing}{1}{
+      \setlength{\parskip}{1pt}
+      \if@twocolumn
+        \@restonecoltrue\onecolumn
+      \else
+        \@restonecolfalse
+      \fi
+      \chapter*{\listtablename
+        \@mkboth{
           \MakeUppercase\listtablename}{\MakeUppercase\listtablename}}
-    \@starttoc{lot}
-    \if@restonecol\twocolumn\fi
-    \cleardoublepage
-}\end{spacing}
+      \@starttoc{lot}
+      \if@restonecol\twocolumn\fi
+      \cleardoublepage
+    }\end{spacing}
 }
 %==============================================================================
 %
@@ -372,37 +372,37 @@
 \newcommand\listsymbolname{Danh Sách Viết Tắt}
 \usepackage{longtable}
 \newcommand\listofsymbols[2]{
-\btypeout{\listsymbolname}
-\addtotoc{\listsymbolname}
-    \chapter*{\listsymbolname
-      \@mkboth{
-          \MakeUppercase\listsymbolname}{\MakeUppercase\listsymbolname}}
-\begin{longtable}[c]{#1}#2\end{longtable}\par
-    \cleardoublepage
+  \btypeout{\listsymbolname}
+  \addtotoc{\listsymbolname}
+  \chapter*{\listsymbolname
+    \@mkboth{
+      \MakeUppercase\listsymbolname}{\MakeUppercase\listsymbolname}}
+  \begin{longtable}[c]{#1}#2\end{longtable}\par
+  \cleardoublepage
 }
 %==============================================================================
 \newcommand\listconstants{Physical Constants}
 \usepackage{longtable}
 \newcommand\listofconstants[2]{
-\btypeout{\listconstants}
-\addtotoc{\listconstants}
-    \chapter*{\listconstants
-      \@mkboth{
-          \MakeUppercase\listconstants}{\MakeUppercase\listconstants}}
-\begin{longtable}[c]{#1}#2\end{longtable}\par
-    \cleardoublepage
+  \btypeout{\listconstants}
+  \addtotoc{\listconstants}
+  \chapter*{\listconstants
+    \@mkboth{
+      \MakeUppercase\listconstants}{\MakeUppercase\listconstants}}
+  \begin{longtable}[c]{#1}#2\end{longtable}\par
+  \cleardoublepage
 }
 %==============================================================================
 \newcommand\listnomenclature{Symbols}
 \usepackage{longtable}
 \newcommand\listofnomenclature[2]{
-\btypeout{\listnomenclature}
-\addtotoc{\listnomenclature}
-    \chapter*{\listnomenclature
-      \@mkboth{
-          \MakeUppercase\listnomenclature}{\MakeUppercase\listnomenclature}}
-\begin{longtable}[c]{#1}#2\end{longtable}\par
-    \cleardoublepage
+  \btypeout{\listnomenclature}
+  \addtotoc{\listnomenclature}
+  \chapter*{\listnomenclature
+    \@mkboth{
+      \MakeUppercase\listnomenclature}{\MakeUppercase\listnomenclature}}
+  \begin{longtable}[c]{#1}#2\end{longtable}\par
+  \cleardoublepage
 }
 %==============================================================================
 \newcommand\reviews[1]{
@@ -410,7 +410,7 @@
 \addtotoc{Nhận Xét}
 \thispagestyle{plain}
 \begin{center}
-    {\Large{\textbf{NHẬN XÉT}} \par}
+  {\Large{\textbf{NHẬN XÉT}} \par}
 \end{center}
 {\normalsize #1}
 \vfil\vfil\null
@@ -428,23 +428,23 @@
 %==============================================================================
 \usepackage[xindy,nonumberlist,toc]{glossaries}
 \newcommand\printglossarieshere[1]{
-    \btypeout{Thuật Ngữ Và Từ Viết Tắt}
-    \renewcommand*{\glossaryname}{Thuật Ngữ Và Từ Viết Tắt}
-    \renewcommand*{\glsgroupskip}{}
-    \renewcommand*{\arraystretch}{1}% default is 1
-    \glsaddall
-    \printglossaries
-    \clearpage
+  \btypeout{Thuật Ngữ Và Từ Viết Tắt}
+  \renewcommand*{\glossaryname}{Thuật Ngữ Và Từ Viết Tắt}
+  \renewcommand*{\glsgroupskip}{}
+  \renewcommand*{\arraystretch}{1}% default is 1
+  \glsaddall
+  \printglossaries
+  \clearpage
 }
 %==============================================================================
 \newcommand\dedicatory[1]{
-\btypeout{Dedicatory}
-\thispagestyle{plain}
-\null\vfil
-\vskip 60\p@
-\begin{center}{\Large \sl #1}\end{center}
-\vfil\null
-\cleardoublepage
+  \btypeout{Dedicatory}
+  \thispagestyle{plain}
+  \null\vfil
+  \vskip 60\p@
+  \begin{center}{\Large \sl #1}\end{center}
+  \vfil\null
+  \cleardoublepage
 }
 %==============================================================================
 \renewcommand\listingscaption{Code}
