@@ -4,5 +4,6 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
-    "files.autoSave": "onFocusChange"
+    "files.autoSave": "onFocusChange",
+    "latex-workshop.formatting.latex": "latexindent"
 }
