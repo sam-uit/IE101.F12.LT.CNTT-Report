@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<upload>
+    <image>
+        <name/>
+        <title/>
+        <caption/>
+        <hash>tGafb</hash>
+        <deletehash>6xVMsvqBmRySv3e</deletehash>
+        <datetime>2025-12-01 15:31:28</datetime>
+        <type>image/jpeg</type>
+        <animated>false</animated>
+        <width>1920</width>
+        <height>1080</height>
+        <size>1024</size>
+        <views>0</views>
+        <bandwidth>0</bandwidth>
+    </image>
+    <links>
+        <original>http://i.imgur.com/tGafb.jpg</original>
+        <imgur_page>http://imgur.com/tGafb</imgur_page>
+        <delete_page>http://imgur.com/delete/6xVMsvqBmRySv3e</delete_page>
+        <small_square>http://i.imgur.com/tGafbs.jpg</small_square>
+        <large_thumbnail>http://i.imgur.com/tGafbl.jpg</large_thumbnail>
+        </links>
+</upload>

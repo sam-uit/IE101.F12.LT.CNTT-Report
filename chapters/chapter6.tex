@@ -1,0 +1,85 @@
+\chapter{Xây dựng chức năng} % (fold)
+\label{cha:devbasicfeatures}
+
+\blindtext
+
+\section{Sample Tables}
+\label{sec:samplatables}
+
+Please refer to the table \nameref{tab:uploadmethod} for more information.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{@{} c | l @{}}
+        \toprule
+        \textbf{Phương thức} & \textbf{Mục đích} \\
+        \midrule
+        \textbf{POST} & Tải một ảnh hoặc \gls{url} \\
+        \midrule
+        \textbf{GET} & Tải một ảnh \\
+        \bottomrule
+    \end{tabular}
+    \caption{Sample Table 1}
+    \label{tab:uploadmethod}
+\end{table}
+
+\blindtext
+
+Please refer to the table \nameref{tab:uploadparameter} for more information.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{@{}l | l | l | m{4cm}@{}}
+        \toprule
+        \textbf{Thông số} & \textbf{Bắt buộc} & \textbf{Phương thức} &
+        \textbf{Ý nghĩa} \\
+        \midrule
+        \emph{key} & Bắt buộc & GET/POST & API key \\
+        \emph{image} & Bắt buộc & POST & Image \\
+        \midrule
+        \emph{type} & Tùy chọn & POST & Image type \\
+        \emph{name} & Tùy chọn & GET/POST & \\
+        \emph{title} & Tùy chọn & GET/POST & \\
+        \emph{caption} & Tùy chọn & GET/POST & \\
+        \bottomrule
+    \end{tabular}
+    \caption{Sample Table 2}
+    \label{tab:uploadparameter}
+\end{table}
+
+\subsection{Sample Codes}
+\label{sub:samplecodes}
+
+\blindtext
+
+Please refer to the code in \nameref{lst:samplecode1} and \nameref{lst:samplecode2} for more information.
+
+\subsubsection{Sample Code 1}
+\label{sub:samplecode1}
+
+\blindtext
+
+\begin{listing}[!htbp]
+\begin{minted}[frame=lines,fontsize=\footnotesize]{python}
+import cStringIO
+import pycurl
+
+from xml.etree import cElementTree as ET
+\end{minted}
+\caption{Sample Code 1}
+\label{lst:samplecode1}
+\end{listing}
+
+\subsubsection{Sample Code 2}
+\label{sub:samplecode2}
+
+\blindtext
+
+\begin{listing}[htbp]
+\begin{minted}[frame=lines,fontsize=\footnotesize]{python}
+# Image file to upload
+filename = "omgvoz.jpg"
+\end{minted}
+\caption{Sample Code 2}
+\label{lst:samplecode2}
+\end{listing}
