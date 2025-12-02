@@ -5,5 +5,9 @@
     "editor.formatOnSave": false,
     "editor.wordWrap": "on",
     "files.autoSave": "onFocusChange",
-    "latex-workshop.formatting.latex": "latexindent"
+    "latex-workshop.formatting.latex": "tex-fmt",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.selection.smart.latex.enabled": true,
+    "latex-workshop.format.fixQuotes.enabled": true
 }
