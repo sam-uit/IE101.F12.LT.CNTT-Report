@@ -1,3 +1,5 @@
+fmt:
+	tex-fmt thesis.tex
 pdf:
 	makeglossaries thesis
 	bibtex thesis
