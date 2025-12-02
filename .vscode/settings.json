@@ -1,0 +1,8 @@
+{
+    "editor.fontFamily": "Iosevka, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "files.autoSave": "onFocusChange"
+}
