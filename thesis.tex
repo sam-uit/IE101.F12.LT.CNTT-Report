@@ -15,18 +15,19 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{float}
+\usepackage{calc}
+\usepackage{tocloft}
+
 %\usemintedstyle{trac}
 \floatstyle{boxed}
 \restylefloat{figure}
 
-\usepackage{tocloft,calc}
-
-%\renewcommand\cftchappresnum{\chaptername\space}
-%\setlength{\cftchapnumwidth}{\widthof{\textbf{Chương~999~}}}
-
 % Display the chapter name (i.e Chương) in TOC
 \renewcommand\cftchappresnum{\chaptername\space}
-\setlength{\cftchapnumwidth}{\widthof{\textbf{Chương~99~}}}
+\renewcommand\cftchapaftersnum{.\space}
+
+% Set a width for chapnum that can span wider after we add the \chaptername
+\setlength{\cftchapnumwidth}{\widthof{\textbf{Chương~999~}}}
 
 \makeatletter
 \g@addto@macro\appendix{%
@@ -142,7 +143,7 @@
 \fancyhead{}  % Clears all page headers and footers
 \rhead{\thepage}  % Sets the right side header to show the page number
 % Hiện tiêu đề Mục Lục trên header
-\lhead{\textbf{\leftmark}}
+\lhead{\textsc{\leftmark}}
 
 \pagestyle{fancy}  % Finally, use the "fancy" page style to implement the FancyHdr headers
 
@@ -283,7 +284,8 @@ Ngày:\\ \rule[1em]{25em}{0.5pt}
 \lhead{\textsc{\chaptername} \space \thechapter. \space \textsc{\leftmark}}
 \rhead{\thepage}
 \renewcommand{\footrulewidth}{0.4pt} % default is 0pt
-\lfoot{\small GVHD:~\instructorname}\rfoot{\small SVTH:~\studentname}
+\lfoot{\small GVHD:~\instructorname}
+\rfoot{\small SVTH:~\studentname}
 
 %\appsecnums
 \appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
