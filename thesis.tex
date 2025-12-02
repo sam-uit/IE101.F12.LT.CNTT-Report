@@ -25,6 +25,8 @@
 % Display the chapter name (i.e Chương) in TOC
 \renewcommand\cftchappresnum{\chaptername\space}
 \renewcommand\cftchapaftersnum{.\space}
+
+% Set a width for chapnum that can span wider after we add the \chaptername
 \setlength{\cftchapnumwidth}{\widthof{\textbf{Chương~999~}}}
 
 \makeatletter
