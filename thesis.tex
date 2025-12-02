@@ -107,25 +107,25 @@
 \frontmatter	  % Begin Roman style (i, ii, iii, iv...) page numbering
 
 % Set up the Title Page
-\title  {\bf\Huge DOCUMENT TITLE}
-\authors  {\texorpdfstring{\href{http://example.com}{AUTHOR}}
+\title{\bf\Huge DOCUMENT TITLE}
+\authors{\texorpdfstring{\href{http://example.com}{AUTHOR}}
             {AUTHOR}}
 %\addresses  {\groupname\\\deptname\\\univname}  % Do not change this here
-\addresses  {ADDRESS}
-\date       {DATE}
-\subject    {SUBJECT}
-\keywords   {KEYWORDS}
-\instructor {INSTRUCTOR}
-\INSTRUCTOR {INSTRUCTOR}
-\student {STUDENT}
-\STUDENT {STUDENT}
+\addresses{ADDRESS}
+\date{DATE}
+\subject{SUBJECT}
+\keywords{KEYWORDS}
+\instructor{INSTRUCTOR}
+\INSTRUCTOR{INSTRUCTOR}
+\student{STUDENT}
+\STUDENT{STUDENT}
 \projectname{\texorpdfstring{PROJECT DESCRIPTION \href{http://example.com}{PROJECT NAME}}}
-\department {DEPARTMENT}
-\DEPARTMENT {DEPARTMENT}
-\faculty {FACULTY}
-\FACULTY {FACULTY}
-\class {CLASS}
-\schoolyear {SCHOOL YEAR}
+\department{DEPARTMENT}
+\DEPARTMENT{DEPARTMENT}
+\faculty{FACULTY}
+\FACULTY{FACULTY}
+\class{CLASS}
+\schoolyear{SCHOOL YEAR}
 
 %==============================================================================
 \maketitle % MAKE TITLE
@@ -234,11 +234,11 @@ Trang này được cố tình để trống.
 %------------------------------------------------------------------------------
 \addtotoc{Các Đoạn Mã Nguồn}
 \renewcommand\listoflistingscaption{Các Đoạn Mã Nguồn}
-\listoflistings
+\listoflistings{}
 %------------------------------------------------------------------------------
 \input{./glossaries/glossaries}
 \setglossarystyle{altlist}
-\printglossarieshere
+\printglossarieshere{}
 \clearpage
 %==============================================================================
 
@@ -249,13 +249,13 @@ Trang này được cố tình để trống.
 % \addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
 
 %==============================================================================
-\mainmatter	  % Begin normal, numeric (1,2,3...) page numbering
+\mainmatter{} % Begin normal, numeric (1,2,3...) page numbering
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{#1}{}}
 \lhead{\chaptername\space \thechapter. \space \leftmark}
 \renewcommand{\footrulewidth}{0.4pt} % default is 0pt
-\lfoot{\small GVHD: \instructorname}\rfoot{\small SVTH: \studentname}
+\lfoot{\small GVHD:~\instructorname}\rfoot{\small SVTH:~\studentname}
 % Include the chapters of the thesis, as separate files
 % Just uncomment the lines as you write the chapters
 
@@ -278,7 +278,7 @@ Trang này được cố tình để trống.
 \lhead{\appendixname\space \thechapter. \space \leftmark}
 \rhead{\thepage}
 \renewcommand{\footrulewidth}{0.4pt} % default is 0pt
-\lfoot{\small GVHD: \instructorname}\rfoot{\small SVTH: \studentname}
+\lfoot{\small GVHD:~\instructorname}\rfoot{\small SVTH:~\studentname}
 
 %\appsecnums
 \appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
@@ -293,10 +293,13 @@ Trang này được cố tình để trống.
 \pagestyle{fancy}
 \fancyhead{}
 \addtotoc{Tài Liệu Tham Khảo}
-\label{bibliography}
-\lhead{\emph{Tài Liệu Tham Khảo}}  % Change the left side page header to "Bibliography"
-\bibliographystyle{unsrtnat}  % Use the "unsrtnat" BibTeX style for formatting the Bibliography
-\bibliography{./bibliography/bibliography}  % The references (bibliography) information are
+%\label{bibliography}
+% Change the left side page header to "Bibliography"
+\lhead{\emph{Tài Liệu Tham Khảo}}
+% Use the "unsrtnat" BibTeX style for formatting the Bibliography
+\bibliographystyle{unsrtnat}
+ % The references (bibliography) information are
+\bibliography{./bibliography/bibliography}
 %==============================================================================
 \end{document}  % THE END
 %==============================================================================
