@@ -190,16 +190,16 @@
 \degree      {}
 \authors     {}
 \university  {\texorpdfstring{\href{http://www.example.com}
-    {UNIVERSITY NAME}}
-  {UNIVERSITY NAME}}
+    {TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}}
+  {TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}}
 \UNIVERSITY  {\texorpdfstring{\href{http://www.example.com}
-    {UNIVERSITY NAME}}{UNIVERSITY NAME}}
+    {ĐẠI HỌC QUỐC GIA TP HỒ CHÍ MINH}}{ĐẠI HỌC QUỐC GIA TP HỒ CHÍ MINH}}
 \department  {\texorpdfstring{\href{Department or School Web Site URL Here (include http://)}
     {Department or School Name}}
   {Department or School Name}}
 \DEPARTMENT  {\texorpdfstring{\href{Department or School Web Site URL Here (include http://)}
-    {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
-  {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
+    {TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}}
+  {TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}}
 \group       {\texorpdfstring{\href{Research Group Web Site URL Here (include http://)}
     {Research Group Name}}
   {Research Group Name}}
@@ -241,15 +241,15 @@
           \bf {Giảng Viên Hướng Dẫn:}\\
           \bf {Sinh Viên Thực Hiện:}\\
           \bf {Lớp:}\\
-          \bf {Ngành:}\\
-          \bf {Khóa:}
+          \bf {Mã Môn:}\\
+          \bf {Tên Môn:}
         \end{minipage}
         \begin{minipage}{0.4\textwidth}
           \bf {\INSTRUCTORNAME}\\
           \bf {\STUDENTNAME}\\
           \bf {\classname}\\
           \bf {\DEPTNAME}\\
-          \bf {\schyear}
+          \bf {\deptname}
         \end{minipage}}
       \vfill
       {\large \bf \addressnames, \@date \par}

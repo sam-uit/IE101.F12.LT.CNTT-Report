@@ -83,21 +83,27 @@
     {\begin{enumerate}
 	\setlength{\itemsep}{1pt}
 	\setlength{\parskip}{0pt}
-	\setlength{\parsep}{0pt}}
+	\setlength{\parsep}{0pt}
+	\setlength{\topsep}{0pt}
+	\setlength{\partopsep}{0pt}}
     {\end{enumerate}}
 
 \newenvironment{newitemize}
     {\begin{itemize}
 	\setlength{\itemsep}{1pt}
 	\setlength{\parskip}{0pt}
-	\setlength{\parsep}{0pt}}
+	\setlength{\parsep}{0pt}
+	\setlength{\topsep}{0pt}
+	\setlength{\partopsep}{0pt}}
     {\end{itemize}}
 
 \newenvironment{newdescription}
     {\begin{description}
 	\setlength{\itemsep}{1pt}
 	\setlength{\parskip}{0pt}
-	\setlength{\parsep}{0pt}}
+	\setlength{\parsep}{0pt}
+	\setlength{\topsep}{0pt}
+	\setlength{\partopsep}{0pt}}
     {\end{description}}
 
 %==============================================================================
@@ -107,25 +113,24 @@
 \frontmatter	  % Begin Roman style (i, ii, iii, iv...) page numbering
 
 % Set up the Title Page
-\title{\bf\Huge DOCUMENT TITLE}
-\authors{\texorpdfstring{\href{http://example.com}{AUTHOR}}
-    {AUTHOR}}
+\title{\bf\Huge BÁO CÁO MÔN HỌC}
+\authors{Nhóm 1 (Alpha)}
 %\addresses  {\groupname\\\deptname\\\univname}  % Do not change this here
-\addresses{ADDRESS}
-\date{DATE}
-\subject{SUBJECT}
-\keywords{KEYWORDS}
-\instructor{INSTRUCTOR}
-\INSTRUCTOR{INSTRUCTOR}
-\student{STUDENT}
-\STUDENT{STUDENT}
-\projectname{\texorpdfstring{PROJECT DESCRIPTION \href{http://example.com}{PROJECT NAME}}}
-\department{DEPARTMENT}
-\DEPARTMENT{DEPARTMENT}
+\addresses{TP.~Hồ Chí Minh}
+\date{Tháng 12, 2025}
+\subject{PHÂN TÍCH CƠ SỞ HẠ TẦNG CÔNG NGHỆ THÔNG TIN CỦA MỘT DOANH NGHIỆP}
+\keywords{IT103}
+\instructor{Ths. Đỗ Minh Tiến}
+\INSTRUCTOR{Ths. Đỗ Minh Tiến}
+\student{Nhóm 1 (Alpha)}
+\STUDENT{Nhóm 1 (Alpha)}
+\projectname{PHÂN TÍCH CƠ SỞ HẠ TẦNG CÔNG NGHỆ THÔNG TIN CỦA MỘT DOANH NGHIỆP}
+\department{Cơ Sở Hạ Tầng CNTT}
+\DEPARTMENT{IT103}
 \faculty{FACULTY}
 \FACULTY{FACULTY}
-\class{CLASS}
-\schoolyear{SCHOOL YEAR}
+\class{LT.K2025.2-CNTT}
+\schoolyear{2025}
 
 %==============================================================================
 \maketitle % MAKE TITLE
@@ -266,7 +271,7 @@ Ngày:\\ \rule[1em]{25em}{0.5pt}
 \include{./chapters/chapter4}
 \include{./chapters/chapter5}
 \include{./chapters/chapter6}
-\include{./chapters/chapter7}
+%\include{./chapters/chapter7}
 %\clearpage
 %==============================================================================
 % Now begin the Appendices, including them as separate files
@@ -282,8 +287,8 @@ Ngày:\\ \rule[1em]{25em}{0.5pt}
 %\appsecnums
 \appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
 % \begin{appendices}
-\input{./appendices/appendixA}	% Appendix Title
-\input{./appendices/appendixB}	% Appendix Title
+%\input{./appendices/appendixA}	% Appendix Title
+%\input{./appendices/appendixB}	% Appendix Title
 % \begin{appendices}
 %\backmatter
 \addtocontents{toc}{} % Add a gap in the Contents, for aesthetics
