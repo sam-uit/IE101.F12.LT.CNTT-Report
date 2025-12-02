@@ -39,12 +39,12 @@
 \usepackage[title, titletoc]{appendix}
 
 \newcommand\Declaration[1]{
-\btypeout{Mở Đầu}
-\addtotoc{Mở Đầu}
+\btypeout{Giới Thiệu}
+\addtotoc{Giới Thiệu}
 \thispagestyle{plain}
 %\null\vfil
 %\vskip 60\p@
-\begin{center}{\Large \bf MỞ ĐẦU\par}\end{center}
+\begin{center}{\Large \sc Nhóm 1 (Alpha) \par}\end{center}
 %\vskip 60\p@
 {\normalsize #1}
 \vfil\vfil\null
