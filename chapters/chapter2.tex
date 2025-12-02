@@ -1,29 +1,140 @@
-\chapter{Tiêu đề của chương 2}
+\chapter{THÀNH PHẦN CẤU TẠO CƠ SỞ HẠ TẦNG CNTT}
 \label{cha:chapter2}
 
-\section{Tiêu đề của section 2.1}
+\section{Hạ tầng phần cứng}
 \label{sec:section2.1}
 
-\blindtext
-
-\blindtext
-
-\subsection{Tiêu đề của subsection 2.1.1}
+\subsection{Thiết bị mạng}
 \label{subsec:subsection2.1.1}
 
-\blindtext
+\begin{table}[H]
+    \centering
+    \begin{tabular}{p{0.2\textwidth} | p{0.7\textwidth}}
+        \toprule
+        \textbf{Thành Phần} & \textbf{Mô Tả \& Mục Đích}                                                                                                                                                                                                                                                         \\
+        \hline \hline
+        Firewall            & \textbullet \space Bảo vệ mạng nội bộ khỏi các mối đe dọa từ bên ngoài Internet. \newline \textbullet \space Kiểm soát lưu lượng mạng vào/ra dựa trên các quy tắc ưu tiên QoS (Quality of Service). \newline \textbullet \space Ngăn chặn truy cập trái phép, phần mềm độc hại.    \\
+        \midrule
+        Switch              & \textbullet \space Kết nối các thiết bị trong cùng một mạng nội bộ (LAN) với nhau. \newline \textbullet \space Chuyển tiếp dữ liệu một cách có chủ đích giữa các thiết bị với nhau. \newline \textbullet \space Là thiết bị đóng vài trò tạo nên xương sống của hệ thống mạng LAN. \\
+        \midrule
+        Router              & \textbullet \space Thiết bị dùng để cung cấp Internet của nhà mạng, dùng để kết nối vào Firewall để các thiết bị có thể truy cập Internet.                                                                                                                                         \\
+        \midrule
+        Access Point        & \textbullet \space Phát sóng Wi-Fi, cho phép các thiết bị không dây kết nối với nhau qua mạng nội bộ. \newline \textbullet \space Mở rộng vòng phủ sóng của mạng.                                                                                                                  \\
+        \bottomrule
+    \end{tabular}
+    \caption{Phần Cứng -- Thiết Bị Mạng}
+    \label{tab:hardwarenetwork}
+\end{table}
 
-\blindtext
-
-\subsubsection{Tiêu đề của subsubsection 2.1.1.1}
+\subsection{Hệ thống máy chủ (Server) và Lưu Trữ}
 \label{subsubsec:subsubsection2.1.1.1}
 
-\blindtext
+\begin{table}[H]
+    \centering
+    \begin{tabular}{p{0.2\textwidth} | p{0.7\textwidth}}
+        \toprule
+        \textbf{Thành Phần}      & \textbf{Mô Tả \& Mục Đích}                                                                                                                                                                                                                \\
+        \hline \hline
+        Active Directory Server  & \textbullet \space Quản lý truy cập và phân quyền cho tất cả các thiết bị đầu cuối và người dùng trong hệ thống nội bộ. \newline \textbullet \space Là xương sống trong quản lý hệ thống để liên kết với các dịch vụ khác (Azure, Cloud). \\
+        \midrule
+        Máy chủ ảo hóa (Hyper-V) & \textbullet \space Dựa trên công nghệ ảo hóa của Microsoft. \newline \textbullet \space Triển khai công cụ ảo hóa các dịch vụ và máy chủ khác để tối ưu hóa chi phí và tài nguyên.                                                        \\
+        \midrule
+        Lưu Trữ                  & \textbullet \space Sử dụng Synology NAS nội bộ và Cloud Storage (Onedrive). \newline \textbullet \space Lưu trữ và truy cập các dữ liệu nhanh chóng và tiện lợi.                                                                          \\
+        \midrule
+        DNS Server               & \textbullet \space Sử dụng DNS Server nội bộ để truy cập các dịch vụ dễ dàng hơn. \newline \textbullet \space Ngoài ra còn sử dụng DNS Cloudflare.                                                                                        \\
+        \bottomrule
+    \end{tabular}
+    \caption{Phần Cứng - Máy Chủ \& Lưu Trữ}
+    \label{tab:hardwareserver}
+\end{table}
 
-\blindtext
+\subsection{Thiết bị đầu cuối}
+\label{subsec:subsection2.1.2}
 
-\begin{newitemize}
-    \item[\textbullet] lorem ipsum dolor sit amet
-    \item[\textbullet] consectetur adipiscing elit
-    \item[\textbullet] sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-\end{newitemize}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{p{0.2\textwidth} | p{0.7\textwidth}}
+        \toprule
+        \textbf{Thành Phần} & \textbf{Mô Tả \& Mục Đích}                                                                                                                                                                                                                                                         \\
+        \hline \hline
+        Firewall            & \textbullet \space Bảo vệ mạng nội bộ khỏi các mối đe dọa từ bên ngoài Internet. \newline \textbullet \space Kiểm soát lưu lượng mạng vào/ra dựa trên các quy tắc ưu tiên QoS (Quality of Service). \newline \textbullet \space Ngăn chặn truy cập trái phép, phần mềm độc hại.    \\
+        \midrule
+        Switch              & \textbullet \space Kết nối các thiết bị trong cùng một mạng nội bộ (LAN) với nhau. \newline \textbullet \space Chuyển tiếp dữ liệu một cách có chủ đích giữa các thiết bị với nhau. \newline \textbullet \space Là thiết bị đóng vài trò tạo nên xương sống của hệ thống mạng LAN. \\
+        \midrule
+        Router              & \textbullet \space Thiết bị dùng để cung cấp Internet của nhà mạng, dùng để kết nối vào Firewall để các thiết bị có thể truy cập Internet.                                                                                                                                         \\
+        \midrule
+        Access Point        & \textbullet \space Phát sóng Wi-Fi, cho phép các thiết bị không dây kết nối với nhau qua mạng nội bộ. \newline \textbullet \space Mở rộng vòng phủ sóng của mạng.                                                                                                                  \\
+        \bottomrule
+    \end{tabular}
+    \caption{Phần Cứng - Thiết Bị Đầu Cuối}
+    \label{tab:hardwareenddevices}
+\end{table}
+
+\section{Hạ tầng phần mềm}
+
+\subsection{Phần mềm nền tảng}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{p{0.2\textwidth} | p{0.7\textwidth}}
+        \toprule
+        \textbf{Thành Phần} & \textbf{Mô Tả \& Mục Đích}                                                                                                                                                                                                                                                         \\
+        \hline \hline
+        Firewall            & \textbullet \space Bảo vệ mạng nội bộ khỏi các mối đe dọa từ bên ngoài Internet. \newline \textbullet \space Kiểm soát lưu lượng mạng vào/ra dựa trên các quy tắc ưu tiên QoS (Quality of Service). \newline \textbullet \space Ngăn chặn truy cập trái phép, phần mềm độc hại.    \\
+        \midrule
+        Switch              & \textbullet \space Kết nối các thiết bị trong cùng một mạng nội bộ (LAN) với nhau. \newline \textbullet \space Chuyển tiếp dữ liệu một cách có chủ đích giữa các thiết bị với nhau. \newline \textbullet \space Là thiết bị đóng vài trò tạo nên xương sống của hệ thống mạng LAN. \\
+        \midrule
+        Router              & \textbullet \space Thiết bị dùng để cung cấp Internet của nhà mạng, dùng để kết nối vào Firewall để các thiết bị có thể truy cập Internet.                                                                                                                                         \\
+        \midrule
+        Access Point        & \textbullet \space Phát sóng Wi-Fi, cho phép các thiết bị không dây kết nối với nhau qua mạng nội bộ. \newline \textbullet \space Mở rộng vòng phủ sóng của mạng.                                                                                                                  \\
+        \bottomrule
+    \end{tabular}
+    \caption{Phần Mềm - Nền Tảng}
+    \label{tab:softwareplatform}
+\end{table}
+
+\subsection{Phần mềm quản lý}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{p{0.2\textwidth} | p{0.7\textwidth}}
+        \toprule
+        \textbf{Thành Phần} & \textbf{Mô Tả \& Mục Đích}                                                                                                                                                                                                                                                         \\
+        \hline \hline
+        Firewall            & \textbullet \space Bảo vệ mạng nội bộ khỏi các mối đe dọa từ bên ngoài Internet. \newline \textbullet \space Kiểm soát lưu lượng mạng vào/ra dựa trên các quy tắc ưu tiên QoS (Quality of Service). \newline \textbullet \space Ngăn chặn truy cập trái phép, phần mềm độc hại.    \\
+        \midrule
+        Switch              & \textbullet \space Kết nối các thiết bị trong cùng một mạng nội bộ (LAN) với nhau. \newline \textbullet \space Chuyển tiếp dữ liệu một cách có chủ đích giữa các thiết bị với nhau. \newline \textbullet \space Là thiết bị đóng vài trò tạo nên xương sống của hệ thống mạng LAN. \\
+        \midrule
+        Router              & \textbullet \space Thiết bị dùng để cung cấp Internet của nhà mạng, dùng để kết nối vào Firewall để các thiết bị có thể truy cập Internet.                                                                                                                                         \\
+        \midrule
+        Access Point        & \textbullet \space Phát sóng Wi-Fi, cho phép các thiết bị không dây kết nối với nhau qua mạng nội bộ. \newline \textbullet \space Mở rộng vòng phủ sóng của mạng.                                                                                                                  \\
+        \bottomrule
+    \end{tabular}
+    \caption{Phần Mềm - Quản Lý}
+    \label{tab:softwaremanagement}
+\end{table}
+
+\subsection{Phần mềm ứng dụng và dịch vụ}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{p{0.2\textwidth} | p{0.7\textwidth}}
+        \toprule
+        \textbf{Thành Phần} & \textbf{Mô Tả \& Mục Đích}                                                                                                                                                                                                                                                         \\
+        \hline \hline
+        Firewall            & \textbullet \space Bảo vệ mạng nội bộ khỏi các mối đe dọa từ bên ngoài Internet. \newline \textbullet \space Kiểm soát lưu lượng mạng vào/ra dựa trên các quy tắc ưu tiên QoS (Quality of Service). \newline \textbullet \space Ngăn chặn truy cập trái phép, phần mềm độc hại.    \\
+        \midrule
+        Switch              & \textbullet \space Kết nối các thiết bị trong cùng một mạng nội bộ (LAN) với nhau. \newline \textbullet \space Chuyển tiếp dữ liệu một cách có chủ đích giữa các thiết bị với nhau. \newline \textbullet \space Là thiết bị đóng vài trò tạo nên xương sống của hệ thống mạng LAN. \\
+        \midrule
+        Router              & \textbullet \space Thiết bị dùng để cung cấp Internet của nhà mạng, dùng để kết nối vào Firewall để các thiết bị có thể truy cập Internet.                                                                                                                                         \\
+        \midrule
+        Access Point        & \textbullet \space Phát sóng Wi-Fi, cho phép các thiết bị không dây kết nối với nhau qua mạng nội bộ. \newline \textbullet \space Mở rộng vòng phủ sóng của mạng.                                                                                                                  \\
+        \bottomrule
+    \end{tabular}
+    \caption{Phần Mềm - Ứng Dụng và Dịch Vụ}
+    \label{tab:softwareapplication}
+\end{table}
+
+\section{Tài nguyên mạng}
+
+\section{Quản trị và bảo mật}
