@@ -89,7 +89,8 @@ Modernized LuaLaTeX document class for Vietnamese support]
 \onehalfspacing
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
-\usepackage[margin=20mm]{geometry}
+%\usepackage[margin=20mm]{geometry}
+\RequirePackage[a4paper,left=35mm,right=20mm,top=25mm,bottom=30mm]{geometry}
 \raggedbottom
 \setlength{\topskip}{1\topskip \@plus 5\p@}
 \doublehyphendemerits=10000       % No consecutive line hyphens.
