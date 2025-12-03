@@ -1,0 +1,41 @@
+% Modern Beamer template (LuaLaTeX / Unicode / Vietnamese-ready)
+\documentclass[14pt,aspectratio=169]{beamer}
+
+% Use fontspec + polyglossia for Unicode and Vietnamese support
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{vietnamese}
+\setotherlanguage{english}
+
+% Choose a font that has good Vietnamese coverage; adjust if needed
+\setmainfont{TeX Gyre Termes}
+
+\usetheme{Madrid}
+\setbeamercovered{transparent}
+\setbeamertemplate{navigation symbols}{}
+
+% Common packages
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+% Metadata commands
+\title{Tiêu Đề Trình Chiếu}
+\author{Nhóm 1 (Alpha)}
+\date{Tháng 12, 2025}
+
+\begin{document}
+\begin{frame}\titlepage\end{frame}
+
+\begin{frame}{Mục Lục}
+  \begin{multicols}{2}
+    \tableofcontents
+  \end{multicols}
+\end{frame}
+
+\section{Giới Thiệu}
+\begin{frame}{Giới Thiệu}
+  Nội dung giới thiệu.
+\end{frame}
+
+\end{document}
