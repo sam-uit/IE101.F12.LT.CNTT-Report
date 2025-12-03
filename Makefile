@@ -12,3 +12,7 @@ pdf:
 clean:
 	rm thesis.{log,lol,lot,out,toc,xdy,lof,aux,bbl}
 	rm */*.aux
+
+slides:
+	@echo "Building slides in ./presentations"
+	@$(MAKE) -C presentations pdf
