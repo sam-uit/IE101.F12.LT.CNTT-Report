@@ -11,7 +11,7 @@
 \usepackage{eqparbox}
 \usepackage{array}
 \usepackage{multirow}
-\usepackage{booktabs}
+% `booktabs` is provided by the class; avoid duplicate loading here
 \usepackage{tabularx}
 \usepackage{float}
 \usepackage{calc}
@@ -145,8 +145,7 @@
 \maketitle % MAKE TITLE
 %==============================================================================
 
-\setstretch{1.3}  % It is better to have smaller font and larger line
-% spacing than the other way round
+% Line spacing is controlled by the document class (\onehalfspacing).
 
 % Define the page headers using the FancyHdr package and set up for
 % one-sided printing
@@ -188,8 +187,7 @@
 \clearpage  % Funny Quote page ended, start a new page
 %==============================================================================
 
-\setstretch{1.3}  % Reset the line-spacing to 1.3 for body text (if it has
-%changed)
+% (spacing controlled by class)
 
 % The Acknowledgements page, for thanking everyone
 \acknowledgements{
@@ -208,7 +206,7 @@
 \clearpage  % Funny Quote page ended, start a new page
 %==============================================================================
 
-\setstretch{1.3}
+% (spacing controlled by class)
 
 \reviews{
   \addtocontents{toc}{}
@@ -261,7 +259,7 @@ Ngày:\\ \rule[1em]{25em}{0.5pt}
 \clearpage
 %==============================================================================
 
-\setstretch{1.3}  % Return the line spacing back to 1.3
+% (spacing controlled by class)
 
 \pagestyle{empty}  % Page style needs to be empty for this page
 \dedicatory{}

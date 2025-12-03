@@ -17,6 +17,10 @@
 \ProvidesClass{thesis}
 [2025/12/03 v2.0
 Modernized LuaLaTeX document class for Vietnamese support]
+% Engine note: this class is designed for LuaLaTeX (Unicode + fontspec).
+% If you use `minted` for syntax highlighting, compile with:
+%   lualatex --shell-escape thesis.tex
+% `epstopdf` and `listings` are intentionally omitted for LuaLaTeX workflows.
 \def\baseclass{book}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{\baseclass}}
 \def\@checkoptions#1#2{
@@ -125,20 +129,10 @@ Modernized LuaLaTeX document class for Vietnamese support]
 % Modern graphics support (pdftex no longer needed with LuaLaTeX)
 \usepackage{graphicx}
 \usepackage{minted}
-\usepackage{epstopdf}
 \usepackage{booktabs}
 \usepackage{rotating}
-\usepackage{listings}
-\lstset{captionpos=b,
-  frame=tb,
-  basicstyle=\scriptsize\ttfamily,
-  showstringspaces=false,
-keepspaces=true}
-\lstdefinestyle{matlab} {
-  language=Matlab,
-  keywordstyle=\color{blue},
-  commentstyle=\color[rgb]{0.13,0.55,0.13}\em,
-stringstyle=\color[rgb]{0.7,0,0} }
+% Note: `listings` removed in favor of `minted` (Pygments). Remove `epstopdf`
+% because LuaLaTeX supports common image formats natively.
 % Modern hyperref configuration for LuaLaTeX
 \usepackage[
   bookmarks=true,
