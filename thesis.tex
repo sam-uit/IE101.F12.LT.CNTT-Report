@@ -1,11 +1,10 @@
 %%===========================================================================%%
-%% thesis.tex -- MAIN FILE (the one that you compile with LaTeX)
+%% thesis.tex -- MAIN FILE (the one that you compile with LuaLaTeX)
 %%===========================================================================%%
 
-% Set up the document
-\documentclass[a4paper, oneside]{thesis}  % Use the "Thesis" style, based
-%on the ECS Thesis style by Steve Gunn
-%\usepackage[utf8]{vntex}
+% Set up the document for LuaLaTeX with native Unicode support
+\documentclass[a4paper, oneside, 13pt]{thesis}
+% Modern packages - UTF-8 and Vietnamese are natively supported in LuaLaTeX
 \usepackage{blindtext}
 \usepackage[all]{hypcap}
 \usepackage{paralist}

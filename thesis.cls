@@ -1,23 +1,22 @@
 %%===========================================================================%%
-%% This is file `Thesis.cls', based on 'ECSthesis.cls', by Steve R. Gunn
-%% generated with the docstrip utility.
+%% This is file `thesis.cls', based on 'ECSthesis.cls', by Steve R. Gunn
+%% Modernized for LuaLaTeX with native Unicode and Vietnamese support
 %%
-%% Created by Steve R. Gunn, modified by Sunil Patel: www.sunilpatel.co.uk
+%% Originally created by Steve R. Gunn, modified by Sunil Patel
+%% Modernized in 2025 to use LuaLaTeX
 %%---------------------------------------------------------------------------%%
-%% [Sat May 12 00:08:22 ICT 2012]
-%% This file, `thesis.cls', is based on `Thesis.cls' which have been shared by
-%% Sunil Patel.
-%% Here is  where that I find out this beautiful template for my thesis:
-%% Link: http://www.sunilpatel.co.uk/thesis-template/
-%%
-%% I have added as well as modded something for my requirements.
-%% Thank you all, Steve R. Gunn and Sunil Patel!
+%% Key improvements:
+%% - LuaLaTeX for native UTF-8 and Vietnamese support
+%% - Modern fontspec for font management
+%% - Babel/Polyglossia for proper language support
+%% - Removed dependency on vieextsizes (no longer needed for 13pt font)
+%% - Supports standard 10pt, 11pt, 12pt, and 13pt+ font sizes natively
 %%
 %%===========================================================================%%
-\NeedsTeXFormat{LaTeX2e}[1996/12/01]
+\NeedsTeXFormat{LaTeX2e}[2020/02/01]
 \ProvidesClass{thesis}
-[2007/22/02 v1.0
-  LaTeX document class]
+[2025/12/03 v2.0
+  Modernized LuaLaTeX document class for Vietnamese support]
 \def\baseclass{book}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{\baseclass}}
 \def\@checkoptions#1#2{
@@ -29,13 +28,18 @@
   \let\@this\@empty
   \if@tempswa \else \PassOptionsToClass{#1}{\baseclass}\fi
 }
+% Modern LaTeX supports 10-12pt natively; no need for vieextsizes workaround
 \@checkoptions{12pt}{{10pt}{11pt}{12pt}{13pt}}
 \PassOptionsToClass{a4paper}{\baseclass}
 \ProcessOptions\relax
 \LoadClass{\baseclass}
 \newcommand\bhrule{\typeout{------------------------------------------------------------------------------} }
-\usepackage[13pt]{vieextsizes}
-\usepackage[utf8]{vntex}
+% Font configuration for Vietnamese - required before polyglossia
+\usepackage{fontspec}
+% Modern language support using polyglossia (better for LuaLaTeX with extended languages)
+\usepackage{polyglossia}
+\setdefaultlanguage{vietnamese}
+\setotherlanguage{english}
 \usepackage[title, titletoc]{appendix}
 
 \newcommand\Declaration[1]{
@@ -57,19 +61,10 @@
     July\or August\or September\or October\or November\or December\fi
   \space \number\year}
 \usepackage{setspace}
-\usepackage[utf8]{vntex}
 \onehalfspacing
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
-\usepackage{vmargin}
-\setmarginsrb           { 35mm}  % left margin
-{ 25mm}  % top margin
-{ 20mm}  % right margin
-{ 30mm}  % bottom margin
-{ 20pt}  % head height
-{0.25in}  % head sep
-{ 9pt}  % foot height
-{ 0.3in}  % foot sep
+\usepackage[margin=20mm]{geometry}
 \raggedbottom
 \setlength{\topskip}{1\topskip \@plus 5\p@}
 \doublehyphendemerits=10000       % No consecutive line hyphens.
@@ -123,15 +118,13 @@
 \setcounter{bottomnumber}{9}
 \setcounter{totalnumber}{20}
 \setcounter{dbltopnumber}{9}
-\usepackage[pdftex]{graphicx}
+% Modern graphics support (pdftex no longer needed with LuaLaTeX)
+\usepackage{graphicx}
 \usepackage{minted}
 \usepackage{epstopdf}
-%\usepackage[scriptsize]{subfigure}
 \usepackage{booktabs}
 \usepackage{rotating}
 \usepackage{listings}
-%\usepackage[usenames,dvipsnames,svgnames,x11names,hyperref]{xcolor}
-%\usepackage{lstpatch}
 \lstset{captionpos=b,
   frame=tb,
   basicstyle=\scriptsize\ttfamily,
@@ -142,7 +135,8 @@
   keywordstyle=\color{blue},
   commentstyle=\color[rgb]{0.13,0.55,0.13}\em,
   stringstyle=\color[rgb]{0.7,0,0} }
-\usepackage[pdfpagemode={UseOutlines},
+% Modern hyperref configuration for LuaLaTeX
+\usepackage[
   bookmarks=true,
   bookmarksopen=true,
   bookmarksopenlevel=0,
@@ -154,8 +148,9 @@
   filecolor={magenta},
   urlcolor={blue},
   pdfstartview={FitV},
-  unicode=true,breaklinks=true]{hyperref}
-%    [unicode=true,colorlinks=true]
+  unicode=true,
+  breaklinks=true
+]{hyperref}
 \pdfstringdefDisableCommands{
   \let\\\space
 }

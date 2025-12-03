@@ -1,9 +1,10 @@
 fmt:
 	tex-fmt thesis.tex
 pdf:
+	lualatex --shell-escape thesis.tex
 	makeglossaries thesis
 	bibtex thesis
-	pdflatex --shell-escape thesis.tex
+	lualatex --shell-escape thesis.tex
 clean:
 	rm thesis.{log,lol,lot,out,toc,xdy,lof,aux,bbl}
 	rm */*.aux
