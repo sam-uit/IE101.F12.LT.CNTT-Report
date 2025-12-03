@@ -16,7 +16,7 @@
 \NeedsTeXFormat{LaTeX2e}[2020/02/01]
 \ProvidesClass{thesis}
 [2025/12/03 v2.0
-  Modernized LuaLaTeX document class for Vietnamese support]
+Modernized LuaLaTeX document class for Vietnamese support]
 \def\baseclass{book}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{\baseclass}}
 \def\@checkoptions#1#2{
@@ -24,7 +24,7 @@
   \@tempswafalse
   \@tfor\@this:=#2\do{
     \@expandtwoargs\in@{,\@this,}{,\@curroptions,}
-    \ifin@ \@tempswatrue \@break@tfor \fi}
+  \ifin@ \@tempswatrue \@break@tfor \fi}
   \let\@this\@empty
   \if@tempswa \else \PassOptionsToClass{#1}{\baseclass}\fi
 }
@@ -33,33 +33,36 @@
 \PassOptionsToClass{a4paper}{\baseclass}
 \ProcessOptions\relax
 \LoadClass{\baseclass}
-\newcommand\bhrule{\typeout{------------------------------------------------------------------------------} }
+\newcommand\bhrule{\typeout{------------------------------------------------------------------------------}
+}
 % Font configuration for Vietnamese - required before polyglossia
 \usepackage{fontspec}
-% Modern language support using polyglossia (better for LuaLaTeX with extended languages)
+% Modern language support using polyglossia (better for LuaLaTeX with
+% extended languages)
 \usepackage{polyglossia}
 \setdefaultlanguage{vietnamese}
 \setotherlanguage{english}
 \usepackage[title, titletoc]{appendix}
 
 \newcommand\Declaration[1]{
-\btypeout{Giới Thiệu}
-\addtotoc{Giới Thiệu}
-\thispagestyle{plain}
-%\null\vfil
-%\vskip 60\p@
-\begin{center}{\Large \sc Nhóm 1 (Alpha) \par}\end{center}
-%\vskip 60\p@
-{\normalsize #1}
-\vfil\vfil\null
-%\cleardoublepage
+  \btypeout{Giới Thiệu}
+  \addtotoc{Giới Thiệu}
+  \thispagestyle{plain}
+  %\null\vfil
+  %\vskip 60\p@
+  \begin{center}{\Large \sc Nhóm 1 (Alpha) \par}
+  \end{center}
+  %\vskip 60\p@
+  {\normalsize #1}
+  \vfil\vfil\null
+  %\cleardoublepage
 }
 
 \newcommand\btypeout[1]{\bhrule\typeout{\space #1}\bhrule}
 \def\today{\ifcase\month\or
-    January\or February\or March\or April\or May\or June\or
-    July\or August\or September\or October\or November\or December\fi
-  \space \number\year}
+  January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or December\fi
+\space \number\year}
 \usepackage{setspace}
 \onehalfspacing
 \setlength{\parindent}{0pt}
@@ -78,15 +81,16 @@
 \chead{}
 \cfoot{}
 \pagestyle{fancy}
-\renewcommand{\chaptermark}[1]{\btypeout{\thechapter\space #1}\markboth{\@chapapp\ \thechapter\ #1}{\@chapapp\ \thechapter\ #1}}
+\renewcommand{\chaptermark}[1]{\btypeout{\thechapter\space
+#1}\markboth{\@chapapp\ \thechapter\ #1}{\@chapapp\ \thechapter\ #1}}
 \renewcommand{\sectionmark}[1]{}
 %
 \renewcommand{\subsectionmark}[1]{}
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-      \hbox{}
-      \thispagestyle{empty}
-      \newpage
-      \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+  \hbox{}
+  \thispagestyle{empty}
+  \newpage
+\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 %urlcol
 \usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,xspace}
 \theoremstyle{plain}
@@ -129,12 +133,12 @@
   frame=tb,
   basicstyle=\scriptsize\ttfamily,
   showstringspaces=false,
-  keepspaces=true}
+keepspaces=true}
 \lstdefinestyle{matlab} {
   language=Matlab,
   keywordstyle=\color{blue},
   commentstyle=\color[rgb]{0.13,0.55,0.13}\em,
-  stringstyle=\color[rgb]{0.7,0,0} }
+stringstyle=\color[rgb]{0.7,0,0} }
 % Modern hyperref configuration for LuaLaTeX
 \usepackage[
   bookmarks=true,
@@ -185,25 +189,29 @@
 \degree      {}
 \authors     {}
 \university  {\texorpdfstring{\href{http://www.example.com}
-    {TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}}
   {TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}}
+{TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}}
 \UNIVERSITY  {\texorpdfstring{\href{http://www.example.com}
-    {ĐẠI HỌC QUỐC GIA TP HỒ CHÍ MINH}}{ĐẠI HỌC QUỐC GIA TP HỒ CHÍ MINH}}
-\department  {\texorpdfstring{\href{Department or School Web Site URL Here (include http://)}
-    {Department or School Name}}
+{ĐẠI HỌC QUỐC GIA TP HỒ CHÍ MINH}}{ĐẠI HỌC QUỐC GIA TP HỒ CHÍ MINH}}
+\department  {\texorpdfstring{\href{Department or School Web Site URL
+    Here (include http://)}
   {Department or School Name}}
-\DEPARTMENT  {\texorpdfstring{\href{Department or School Web Site URL Here (include http://)}
-    {TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}}
+{Department or School Name}}
+\DEPARTMENT  {\texorpdfstring{\href{Department or School Web Site URL
+    Here (include http://)}
   {TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}}
-\group       {\texorpdfstring{\href{Research Group Web Site URL Here (include http://)}
-    {Research Group Name}}
+{TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}}
+\group       {\texorpdfstring{\href{Research Group Web Site URL Here
+    (include http://)}
   {Research Group Name}}
-\GROUP       {\texorpdfstring{\href{Research Group Web Site URL Here (include http://)}
-    {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
+{Research Group Name}}
+\GROUP       {\texorpdfstring{\href{Research Group Web Site URL Here
+    (include http://)}
   {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
+{RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
 \faculty     {\texorpdfstring{\href{Faculty Web Site URL Here (include http://)}
-    {Faculty Name}}
   {Faculty Name}}
+{Faculty Name}}
 \FACULTY     {\texorpdfstring{FACULTY NAME (IN BLOCK CAPITALS)}}
 \addresses   {}
 \subject     {A project subject}
@@ -232,7 +240,8 @@
       {\Large \bf \projname \par}
       \bigskip
       \vfill
-      {\begin{minipage}{0.4\textwidth}
+      {
+        \begin{minipage}{0.4\textwidth}
           \bf {Giảng Viên Hướng Dẫn:}\\
           \bf {Sinh Viên Thực Hiện:}\\
           \bf {Lớp:}\\
@@ -245,7 +254,7 @@
           \bf {\classname}\\
           \bf {\DEPTNAME}\\
           \bf {\deptname}
-        \end{minipage}}
+      \end{minipage}}
       \vfill
       {\large \bf \addressnames, \@date \par}
       \bigskip
@@ -301,7 +310,7 @@
 \newcounter{dummy}
 \newcommand\addtotoc[1]{
   \refstepcounter{dummy}
-  \addcontentsline{toc}{chapter}{#1}}
+\addcontentsline{toc}{chapter}{#1}}
 %==============================================================================
 \renewcommand\tableofcontents{
   \btypeout{Mục Lục}
@@ -309,17 +318,18 @@
   \begin{spacing}{1}{
       \setlength{\parskip}{1pt}
       \if@twocolumn
-        \@restonecoltrue\onecolumn
+      \@restonecoltrue\onecolumn
       \else
-        \@restonecolfalse
+      \@restonecolfalse
       \fi
       \chapter*{\contentsname
         \@mkboth{
-          \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}
+      \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}
       \@starttoc{toc}
       \if@restonecol\twocolumn\fi
       \cleardoublepage
-    }\end{spacing}
+    }
+  \end{spacing}
 }
 %==============================================================================
 \renewcommand\listoffigures{
@@ -328,17 +338,18 @@
   \begin{spacing}{1}{
       \setlength{\parskip}{1pt}
       \if@twocolumn
-        \@restonecoltrue\onecolumn
+      \@restonecoltrue\onecolumn
       \else
-        \@restonecolfalse
+      \@restonecolfalse
       \fi
       \chapter*{\listfigurename
         \@mkboth{\MakeUppercase\listfigurename}
-        {\MakeUppercase\listfigurename}}
+      {\MakeUppercase\listfigurename}}
       \@starttoc{lof}
       \if@restonecol\twocolumn\fi
       \cleardoublepage
-    }\end{spacing}
+    }
+  \end{spacing}
 }
 %==============================================================================
 \renewcommand\listoftables{
@@ -347,17 +358,18 @@
   \begin{spacing}{1}{
       \setlength{\parskip}{1pt}
       \if@twocolumn
-        \@restonecoltrue\onecolumn
+      \@restonecoltrue\onecolumn
       \else
-        \@restonecolfalse
+      \@restonecolfalse
       \fi
       \chapter*{\listtablename
         \@mkboth{
-          \MakeUppercase\listtablename}{\MakeUppercase\listtablename}}
+      \MakeUppercase\listtablename}{\MakeUppercase\listtablename}}
       \@starttoc{lot}
       \if@restonecol\twocolumn\fi
       \cleardoublepage
-    }\end{spacing}
+    }
+  \end{spacing}
 }
 %==============================================================================
 %
@@ -371,8 +383,9 @@
   \addtotoc{\listsymbolname}
   \chapter*{\listsymbolname
     \@mkboth{
-      \MakeUppercase\listsymbolname}{\MakeUppercase\listsymbolname}}
-  \begin{longtable}[c]{#1}#2\end{longtable}\par
+  \MakeUppercase\listsymbolname}{\MakeUppercase\listsymbolname}}
+  \begin{longtable}[c]{#1}#2
+  \end{longtable}\par
   \cleardoublepage
 }
 %==============================================================================
@@ -383,8 +396,9 @@
   \addtotoc{\listconstants}
   \chapter*{\listconstants
     \@mkboth{
-      \MakeUppercase\listconstants}{\MakeUppercase\listconstants}}
-  \begin{longtable}[c]{#1}#2\end{longtable}\par
+  \MakeUppercase\listconstants}{\MakeUppercase\listconstants}}
+  \begin{longtable}[c]{#1}#2
+  \end{longtable}\par
   \cleardoublepage
 }
 %==============================================================================
@@ -395,30 +409,32 @@
   \addtotoc{\listnomenclature}
   \chapter*{\listnomenclature
     \@mkboth{
-      \MakeUppercase\listnomenclature}{\MakeUppercase\listnomenclature}}
-  \begin{longtable}[c]{#1}#2\end{longtable}\par
+  \MakeUppercase\listnomenclature}{\MakeUppercase\listnomenclature}}
+  \begin{longtable}[c]{#1}#2
+  \end{longtable}\par
   \cleardoublepage
 }
 %==============================================================================
 \newcommand\reviews[1]{
-\btypeout{Nhận Xét}
-\addtotoc{Nhận Xét}
-\thispagestyle{plain}
-\begin{center}
-  {\Large{\textbf{NHẬN XÉT}} \par}
-\end{center}
-{\normalsize #1}
-\vfil\vfil\null
+  \btypeout{Nhận Xét}
+  \addtotoc{Nhận Xét}
+  \thispagestyle{plain}
+  \begin{center}
+    {\Large{\textbf{NHẬN XÉT}} \par}
+  \end{center}
+  {\normalsize #1}
+  \vfil\vfil\null
 }
 %==============================================================================
 
 \newcommand\acknowledgements[1]{
-\btypeout{Lời Cảm Ơn}
-\addtotoc{Lời Cảm Ơn}
-\thispagestyle{plain}
-\begin{center}{\Large{\textbf{LỜI CẢM ƠN}} \par}\end{center}
-{\normalsize #1}
-\vfil\vfil\null
+  \btypeout{Lời Cảm Ơn}
+  \addtotoc{Lời Cảm Ơn}
+  \thispagestyle{plain}
+  \begin{center}{\Large{\textbf{LỜI CẢM ƠN}} \par}
+  \end{center}
+  {\normalsize #1}
+  \vfil\vfil\null
 }
 %==============================================================================
 \usepackage[xindy,nonumberlist,toc]{glossaries}
@@ -437,7 +453,8 @@
   \thispagestyle{plain}
   \null\vfil
   \vskip 60\p@
-  \begin{center}{\Large \sl #1}\end{center}
+  \begin{center}{\Large \sl #1}
+  \end{center}
   \vfil\null
   \cleardoublepage
 }
@@ -446,13 +463,13 @@
 %==============================================================================
 \renewcommand\backmatter{
   \if@openright
-    \cleardoublepage
+  \cleardoublepage
   \else
-    \clearpage
+  \clearpage
   \fi
   \addtotoc{\bibname}
   \btypeout{\bibname}
-  \@mainmatterfalse}
+\@mainmatterfalse}
 \endinput
 %
 %==============================================================================

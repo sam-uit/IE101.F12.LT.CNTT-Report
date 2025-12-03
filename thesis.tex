@@ -48,9 +48,12 @@
 %\preto{\@newitemize}{\topsep=0pt \partopsep=0pt }
 %\makeatother
 % Include any extra LaTeX packages required
-\usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
-\usepackage{verbatim}  % Needed for the "comment" environment to make LaTeX comments
-\usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
+\usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the
+% "Natbib" style for the references in the Bibliography
+\usepackage{verbatim}  % Needed for the "comment" environment to make
+% LaTeX comments
+\usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for
+% "blackboard" style bold vectors in maths
 %\hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but
 %this can be distracting if there are many links.
 %==============================================================================
@@ -58,59 +61,65 @@
 %==============================================================================
 
 \hypersetup{
-%     %bookmarks=true,         % show bookmarks bar?
-%     %unicode=false,          % non-Latin characters in Acrobat’s bookmarks
-%     %pdftoolbar=true,        % show Acrobat’s toolbar?
-%     %pdfmenubar=true,        % show Acrobat’s menu?
-%     %pdffitwindow=false,     % window fit to page when opened
-%     %pdfstartview={FitH},    % fits the width of the page to the window
-     pdftitle={THE DOCUMENT TITLE},    % title
-     pdfauthor={author},     % author
-     pdfsubject={subject},   % subject of the document
-     pdfcreator={creator},   % creator of the document
-     pdfproducer={producer}, % producer of the document
-     pdfkeywords={keywords}, % list of keywords
-%     %pdfnewwindow=true,      % links in new window
-     colorlinks=true,       % false: boxed links; true: colored links
-%     linkcolor=blue,          % color of internal links
-%     citecolor=green,        % color of links to bibliography
-%     filecolor=magenta,      % color of file links
-%     urlcolor=cyan           % color of external links
+  %     %bookmarks=true,         % show bookmarks bar?
+  %     %unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+  %     %pdftoolbar=true,        % show Acrobat’s toolbar?
+  %     %pdfmenubar=true,        % show Acrobat’s menu?
+  %     %pdffitwindow=false,     % window fit to page when opened
+  %     %pdfstartview={FitH},    % fits the width of the page to the window
+  pdftitle={THE DOCUMENT TITLE},    % title
+  pdfauthor={author},     % author
+  pdfsubject={subject},   % subject of the document
+  pdfcreator={creator},   % creator of the document
+  pdfproducer={producer}, % producer of the document
+  pdfkeywords={keywords}, % list of keywords
+  %     %pdfnewwindow=true,      % links in new window
+  colorlinks=true,       % false: boxed links; true: colored links
+  %     linkcolor=blue,          % color of internal links
+  %     citecolor=green,        % color of links to bibliography
+  %     filecolor=magenta,      % color of file links
+  %     urlcolor=cyan           % color of external links
 }
 
 %==============================================================================
 \newenvironment{newenumerate}
-    {\begin{enumerate}
-	\setlength{\itemsep}{1pt}
-	\setlength{\parskip}{0pt}
-	\setlength{\parsep}{0pt}
-	\setlength{\topsep}{0pt}
-	\setlength{\partopsep}{0pt}}
-    {\end{enumerate}}
+{
+  \begin{enumerate}
+      \setlength{\itemsep}{1pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\parsep}{0pt}
+      \setlength{\topsep}{0pt}
+    \setlength{\partopsep}{0pt}}
+    {
+\end{enumerate}}
 
 \newenvironment{newitemize}
-    {\begin{itemize}
-	\setlength{\itemsep}{1pt}
-	\setlength{\parskip}{0pt}
-	\setlength{\parsep}{0pt}
-	\setlength{\topsep}{0pt}
-	\setlength{\partopsep}{0pt}}
-    {\end{itemize}}
+{
+  \begin{itemize}
+      \setlength{\itemsep}{1pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\parsep}{0pt}
+      \setlength{\topsep}{0pt}
+    \setlength{\partopsep}{0pt}}
+    {
+\end{itemize}}
 
 \newenvironment{newdescription}
-    {\begin{description}
-	\setlength{\itemsep}{1pt}
-	\setlength{\parskip}{0pt}
-	\setlength{\parsep}{0pt}
-	\setlength{\topsep}{0pt}
-	\setlength{\partopsep}{0pt}}
-    {\end{description}}
+{
+  \begin{description}
+      \setlength{\itemsep}{1pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\parsep}{0pt}
+      \setlength{\topsep}{0pt}
+    \setlength{\partopsep}{0pt}}
+    {
+\end{description}}
 
 %==============================================================================
 \begin{document} % BEGIN
 %==============================================================================
 
-\frontmatter	  % Begin Roman style (i, ii, iii, iv...) page numbering
+\frontmatter    % Begin Roman style (i, ii, iii, iv...) page numbering
 
 % Set up the Title Page
 \title{\bf\Huge BÁO CÁO MÔN HỌC}
@@ -136,15 +145,18 @@
 \maketitle % MAKE TITLE
 %==============================================================================
 
-\setstretch{1.3}  % It is better to have smaller font and larger line spacing than the other way round
+\setstretch{1.3}  % It is better to have smaller font and larger line
+% spacing than the other way round
 
-% Define the page headers using the FancyHdr package and set up for one-sided printing
+% Define the page headers using the FancyHdr package and set up for
+% one-sided printing
 \fancyhead{}  % Clears all page headers and footers
 \rhead{\thepage}  % Sets the right side header to show the page number
 % Hiện tiêu đề Mục Lục trên header
 \lhead{\textsc{\leftmark}}
 
-\pagestyle{fancy}  % Finally, use the "fancy" page style to implement the FancyHdr headers
+\pagestyle{fancy}  % Finally, use the "fancy" page style to implement
+% the FancyHdr headers
 
 %==============================================================================
 % An intentionally blank page
@@ -152,16 +164,17 @@
 \pagestyle{empty}
 \null\vfill
 \begin{center}
-    Trang này được cố tình để trống.
+  Trang này được cố tình để trống.
 \end{center}
 \clearpage
 \pagestyle{fancy}
 
 %==============================================================================
-% Declaration Page required for the Thesis, your institution may give you a different text to place here
+% Declaration Page required for the Thesis, your institution may give
+% you a different text to place here
 \Declaration{
-    \addtocontents{toc}{}  % Add a gap in the Contents, for aesthetics
-    \input{./preamble/foreword}
+  \addtocontents{toc}{}  % Add a gap in the Contents, for aesthetics
+  \input{./preamble/foreword}
 }
 \clearpage  % Declaration ended, now start a new page
 %==============================================================================
@@ -170,7 +183,7 @@
 \pagestyle{empty}  % No headers or footers for the following pages
 \null\vfill
 \begin{center}
-    Trang này được cố tình để trống.
+  Trang này được cố tình để trống.
 \end{center}
 \clearpage  % Funny Quote page ended, start a new page
 %==============================================================================
@@ -180,8 +193,8 @@
 
 % The Acknowledgements page, for thanking everyone
 \acknowledgements{
-    \addtocontents{toc}{}  % Add a gap in the Contents, for aesthetics
-    \input{./preamble/acknowledgements}
+  \addtocontents{toc}{}  % Add a gap in the Contents, for aesthetics
+  \input{./preamble/acknowledgements}
 }
 \clearpage  % End of the Acknowledgements
 %==============================================================================
@@ -190,7 +203,7 @@
 \pagestyle{empty}  % No headers or footers for the following pages
 \null\vfill
 \begin{center}
-    Trang này được cố tình để trống.
+  Trang này được cố tình để trống.
 \end{center}
 \clearpage  % Funny Quote page ended, start a new page
 %==============================================================================
@@ -198,7 +211,7 @@
 \setstretch{1.3}
 
 \reviews{
-    \addtocontents{toc}{}
+  \addtocontents{toc}{}
 }
 
 \null\vfill
@@ -215,7 +228,7 @@ Ngày:\\ \rule[1em]{25em}{0.5pt}
 \pagestyle{empty}
 \null\vfill
 \begin{center}
-    Trang này được cố tình để trống.
+  Trang này được cố tình để trống.
 \end{center}
 \clearpage
 %==============================================================================
@@ -226,7 +239,8 @@ Ngày:\\ \rule[1em]{25em}{0.5pt}
 \addtotoc{Mục Lục}
 \tableofcontents
 \clearpage
-% TODO: Display the page number (roman style) in all the pages of table of contents, not only the very first page.
+% TODO: Display the page number (roman style) in all the pages of
+% table of contents, not only the very first page.
 %------------------------------------------------------------------------------
 \addtotoc{Danh Sách Hình Ảnh}
 \renewcommand*\listfigurename{Danh Sách Hình Ảnh}
@@ -289,8 +303,8 @@ Ngày:\\ \rule[1em]{25em}{0.5pt}
 %\appsecnums
 \appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
 % \begin{appendices}
-%\input{./appendices/appendixA}	% Appendix Title
-%\input{./appendices/appendixB}	% Appendix Title
+%\input{./appendices/appendixA}  % Appendix Title
+%\input{./appendices/appendixB}  % Appendix Title
 % \begin{appendices}
 %\backmatter
 \addtocontents{toc}{} % Add a gap in the Contents, for aesthetics
