@@ -97,6 +97,33 @@ Modernized LuaLaTeX document class for Vietnamese support]
 \if@twocolumn\hbox{}\newpage\fi\fi\fi}
 %urlcol
 \usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,xspace}
+% Common packages: moved from `thesis.tex` to centralize preamble
+\usepackage{blindtext}
+% Modern hyperref configuration for LuaLaTeX
+\usepackage[
+  bookmarks=true,
+  bookmarksopen=true,
+  bookmarksopenlevel=0,
+  bookmarksnumbered=true,
+  hypertexnames=false,
+  colorlinks=true,
+  linkcolor={blue},
+  citecolor={green},
+  filecolor={magenta},
+  urlcolor={blue},
+  pdfstartview={FitV},
+  unicode=true,
+  breaklinks=true
+]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{paralist}
+\usepackage{eqparbox}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{calc}
+\usepackage{tocloft}
 \theoremstyle{plain}
 \newtheorem{example}{Example}[chapter]
 \newtheorem{theorem}{Theorem}[chapter]
@@ -133,22 +160,7 @@ Modernized LuaLaTeX document class for Vietnamese support]
 \usepackage{rotating}
 % Note: `listings` removed in favor of `minted` (Pygments). Remove `epstopdf`
 % because LuaLaTeX supports common image formats natively.
-% Modern hyperref configuration for LuaLaTeX
-\usepackage[
-  bookmarks=true,
-  bookmarksopen=true,
-  bookmarksopenlevel=0,
-  bookmarksnumbered=true,
-  hypertexnames=false,
-  colorlinks=true,
-  linkcolor={blue},
-  citecolor={green},
-  filecolor={magenta},
-  urlcolor={blue},
-  pdfstartview={FitV},
-  unicode=true,
-  breaklinks=true
-]{hyperref}
+
 \pdfstringdefDisableCommands{
   \let\\\space
 }
