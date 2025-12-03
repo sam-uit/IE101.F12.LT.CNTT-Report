@@ -121,6 +121,14 @@ Modernized LuaLaTeX document class for Vietnamese support]
 % Common packages: moved from `thesis.tex` to centralize preamble
 \usepackage{blindtext}
 \usepackage[all]{hypcap}
+
+% Vietnamese blindtext command (replacing default English)
+\renewcommand{\blindtext}{%
+  Đây là một đoạn văn bản giữ chỗ được tạo ra tự động. 
+  Nó được sử dụng để minh họa bố cục và định dạng của tài liệu mà không cần nội dung thực tế. 
+  Loại văn bản này thường được gọi là dummy text hoặc Lorem Ipsum trong tiếng Anh. 
+  Trong bối cảnh này, chúng tôi sử dụng Vietnamese dummy text để tương thích với ngôn ngữ tài liệu.
+}
 \usepackage{paralist}
 \usepackage{eqparbox}
 \usepackage{array}
