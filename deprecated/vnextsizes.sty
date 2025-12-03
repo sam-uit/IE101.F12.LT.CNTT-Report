@@ -1,3 +1,7 @@
+%% This file moved to deprecated/ during modernization (2025)
+%% Original: vnextsizes.sty -- kept for historical reasons
+%% See MODERNIZATION.md for details.
+% Below is the original content preserved.
 %% This follows an idea of Hans Steffani.
 %Nguyễn Hữu Điển, có cỡ phông
 %8pt, 9pt, 10pt, 12pt
@@ -12,8 +16,8 @@
 \ProvidesPackage{vieextsizes}
               [2010/03/08 v1.0
  Non Standard LaTeX Package]
-% \PackageWarningNoLine{VieExtSizes}{It is better to use one of the sizes
-%                           ,^^J if you can}
+%\PackageWarningNoLine{VieExtSizes}{It is better to use one of the sizes
+%                          ,^^J if you can}
 \providecommand\@ptsize{}
 \DeclareOption{8pt}{\renewcommand\@ptsize{8}}
 \DeclareOption{9pt}{\renewcommand\@ptsize{9}}
@@ -119,7 +123,7 @@
 \def\EC@family#1#2#3#4#5{%
   \DeclareFontShape{#1}{#2}{#3}{#4}%
   {<5><6><7><8><9><10><10.95><12><14.4>%
-   <17.28><20.74><24.88><29.86><35.83><42.99><51.59>genb*#5}{}}
+   <17.28><20.74><24.88><29.86><35.83><42.99><51.59>genb*#5}{} }
 \EC@family{T1}{cmr}{m}{n}{ecrm}
 \EC@family{T1}{cmr}{m}{sl}{ecsl}
 \EC@family{T1}{cmr}{m}{it}{ecti}
@@ -227,7 +231,7 @@
 \setlength\headsep   {.25in}
 \setlength\topskip   {10\p@}
 \setlength\footskip{.35in}
-\if@compatibility \setlength\maxdepth{4\p@} \else
+\if@compatibility \setlength\maxdepth{4\p@} \ else
 \setlength\maxdepth{.5\topskip} \fi
 \if@compatibility
   \if@twocolumn
