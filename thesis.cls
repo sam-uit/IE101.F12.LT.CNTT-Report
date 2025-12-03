@@ -37,6 +37,24 @@ Modernized LuaLaTeX document class for Vietnamese support]
 \PassOptionsToClass{a4paper}{\baseclass}
 \ProcessOptions\relax
 \LoadClass{\baseclass}
+% Load hyperref early so commands like \texorpdfstring are available
+% (some macros defined below use \texorpdfstring). Keep options
+% tuned for LuaLaTeX (hluatex driver auto-detected).
+\usepackage[
+  bookmarks=true,
+  bookmarksopen=true,
+  bookmarksopenlevel=0,
+  bookmarksnumbered=true,
+  hypertexnames=false,
+  colorlinks=true,
+  linkcolor={blue},
+  citecolor={green},
+  filecolor={magenta},
+  urlcolor={blue},
+  pdfstartview={FitV},
+  unicode=true,
+  breaklinks=true
+]{hyperref}
 \newcommand\bhrule{\typeout{------------------------------------------------------------------------------}
 }
 % Font configuration for Vietnamese - required before polyglossia
@@ -99,22 +117,6 @@ Modernized LuaLaTeX document class for Vietnamese support]
 \usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,xspace}
 % Common packages: moved from `thesis.tex` to centralize preamble
 \usepackage{blindtext}
-% Modern hyperref configuration for LuaLaTeX
-\usepackage[
-  bookmarks=true,
-  bookmarksopen=true,
-  bookmarksopenlevel=0,
-  bookmarksnumbered=true,
-  hypertexnames=false,
-  colorlinks=true,
-  linkcolor={blue},
-  citecolor={green},
-  filecolor={magenta},
-  urlcolor={blue},
-  pdfstartview={FitV},
-  unicode=true,
-  breaklinks=true
-]{hyperref}
 \usepackage[all]{hypcap}
 \usepackage{paralist}
 \usepackage{eqparbox}
