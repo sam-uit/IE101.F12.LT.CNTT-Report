@@ -103,6 +103,8 @@ Modernized LuaLaTeX document class for Vietnamese support]
 \chead{}
 \cfoot{}
 \pagestyle{fancy}
+% Make headheight slightly larger to avoid repeated fancyhdr warnings
+\setlength{\headheight}{14.2pt}
 \renewcommand{\chaptermark}[1]{\btypeout{\thechapter\space
 #1}\markboth{\@chapapp\ \thechapter\ #1}{\@chapapp\ \thechapter\ #1}}
 \renewcommand{\sectionmark}[1]{}
