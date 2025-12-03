@@ -201,4 +201,30 @@ Potential enhancements for future versions:
 ---
 
 **Modernization Date**: December 2025  
-**Branch**: feat/modernizeLaTex
+**Branch**: feat/optimizationCodebase
+
+## Recent edits (2025-12-03)
+
+Summary of concrete follow-up changes applied on Dec 3, 2025 while consolidating the preamble and cleaning the repository:
+
+- Moved common document packages from `thesis.tex` into `thesis.cls` to make `thesis.tex` a minimal user-facing template.
+- Removed legacy/duplicate packages from the class: `listings` and `epstopdf` were removed in favor of `minted` and native LuaLaTeX image handling.
+- Moved the `hyperref` package load earlier in `thesis.cls` (immediately after `\LoadClass`) so macros that use `\texorpdfstring` work during class loading and the main PDF build succeeds.
+- Kept `minted` for syntax highlighting; a build requires `--shell-escape`.
+- Created `deprecated/` entries for historical style files (`vieextsizes.sty`, `vnextsizes.sty`) and preserved original content there.
+- Added a small engine note to `thesis.cls` documenting LuaLaTeX and `minted` requirements.
+- Added a `presentations` modernization earlier (Beamer templates + Makefile) and a `slides` target in the top-level `Makefile` (see repository `Makefile`).
+
+These changes are intentionally conservative: they centralize commonly-used packages for convenience, remove outdated workarounds, and keep the document structure and content unchanged.
+
+### How to build now (quick)
+
+Use the existing `Makefile` targets. For `minted` support the command used by `make` includes `--shell-escape`:
+
+```bash
+# Build thesis PDF (LuaLaTeX + minted)
+lualatex --shell-escape -interaction=nonstopmode thesis.tex
+# You may need to run bibtex/biber and makeglossaries as usual.
+```
+
+If you want, I can run the build locally and fix any remaining warnings; tell me to run `make pdf`.
